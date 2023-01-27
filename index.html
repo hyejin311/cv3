@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.js">
+    <title>CV3 TEST</title>
+</head>
+<body>
+    <header>
+        <h1>logo</h1>
+        <nav></nav>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- main -->
+        <section id="page1"></section>
+        <section id="page2"></section>
+        <section id="page3"></section>
+        <!-- aside -->
+       <aside id="aside">
+        <div class="asidehead">
+            <!-- close btn -->
+        <h3>전체메뉴</h3>
+        <p class="menu">
+            <img src="./img/menu.png" alt="menu">
+        </p>
+
+        <p class="close">
+            <img src="./img/close.png" alt="closebtn"></p>
+    </div>
+
+        <ul class="ultitle">
+            <p>데이터분석</p>
+            <li>랭킹</li>
+            <li>편성표</li>
+            <li>카테고리</li>
+        </ul>
+
+        <ul class="ultitle">
+            <p>서비스</p>
+            <li>광고센터</li>
+            <li>엔터프라이즈전용</li>
+        </ul>
+
+        <ul class="ultitle">
+            <p>컨텐츠</p>
+            <li>커뮤니티</li>
+            <li>이용안내</li>
+            <li>요금제</li>
+        </ul>
+       </aside>
+
+    </main>
+
+    <script>
+        function Menu(){
+            document.getElementById('aside').addEventListener('mouseover',function(e){
+                document.getElementById('aside').style.width='300px';
+                document.querySelector('.close').style.display='block';
+                document.getElementsByClassName('li').style.display='block';
+            });
+        }
+        Menu();
+
+        function Menuout(){
+            document.querySelector('.menu').addEventListener('mouseout',function(e){
+                document.getElementById('aside').style.width='0px';
+            });
+        }
+        Menuout();
+
+
+        function show(){
+            document.querySelector('ul.ultitle>p').addEventListener('mouseover',function(e){
+                document.querySelectorAll('.ultitle li').style.display='block';
+            });
+        }
+        show();
+
+        function Close(){
+            document.querySelector('.close').addEventListener('click',function(e){
+                document.getElementById('aside').style.width='0px';
+            });
+        }
+        Close();
+
+    </script>
+</body>
+</html>
